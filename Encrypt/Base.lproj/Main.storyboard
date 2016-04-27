@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </mutableArray>
+        <mutableArray key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </mutableArray>
+        <mutableArray key="Lato-SemiboldItalic.ttf">
+            <string>Lato-SemiboldItalic</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Encrypt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,178 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-az-mx4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
+                                <color key="backgroundColor" red="1" green="0.26666666666666666" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="ayp-D9-cOm"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEYWORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMG-8b-TdK">
+                                <rect key="frame" x="20" y="28" width="110" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="T6T-os-8MG"/>
+                                    <constraint firstAttribute="height" constant="30" id="bCE-Eg-KVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBu-uG-tp6" customClass="TextFieldView" customModule="Encrypt" customModuleProvider="target">
+                                <rect key="frame" x="140" y="28" width="440" height="30"/>
+                                <color key="backgroundColor" red="0.36862745098039218" green="0.6588235294117647" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.91764705879999997" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rc9-Dh-psF">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol1-Yh-itq" customClass="ButtonView" customModule="Encrypt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.6588235294" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="1vc-bv-bET"/>
+                                            <constraint firstAttribute="height" constant="30" id="cfo-pd-AJF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                        <state key="normal" title="COPY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1vc-bv-bET"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="copyText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxG-yP-Ujw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAV-bn-54b" customClass="ButtonView" customModule="Encrypt" customModuleProvider="target">
+                                        <rect key="frame" x="193" y="0.0" width="174" height="30"/>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.6588235294" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IbB-Id-e7C"/>
+                                            <constraint firstAttribute="width" constant="100" id="Ovj-6m-GLR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                                        <state key="normal" title="CLEAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ovj-6m-GLR"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clearContent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1i-hk-VMm"/>
+                                            <action selector="encryptText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RcT-08-rg8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daX-DL-sh3" customClass="ButtonView" customModule="Encrypt" customModuleProvider="target">
+                                        <rect key="frame" x="387" y="0.0" width="173" height="30"/>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.6588235294" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="H4S-no-ByF"/>
+                                            <constraint firstAttribute="width" constant="100" id="KPp-AE-zFd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                        <state key="normal" title="SEND SMS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KPp-AE-zFd"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdM-dL-jdQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM5-Ii-173" customClass="ButtonView" customModule="Encrypt" customModuleProvider="target">
+                                <rect key="frame" x="520" y="470" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.6588235294" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="RDU-2X-WHX"/>
+                                    <constraint firstAttribute="height" constant="60" id="c26-wV-fzk"/>
+                                </constraints>
+                                <state key="normal" image="unlock@1x">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decryptText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PjO-uM-8Wm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h89-Nf-OFe" customClass="ButtonView" customModule="Encrypt" customModuleProvider="target">
+                                <rect key="frame" x="20" y="470" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.6588235294" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IMi-3v-PqH"/>
+                                    <constraint firstAttribute="height" constant="60" id="ubz-nY-17b"/>
+                                </constraints>
+                                <state key="normal" image="lock@1x">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="encryptText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lpe-cH-Jg9"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-NJ-fQP" customClass="TextView" customModule="Encrypt" customModuleProvider="target">
+                                <rect key="frame" x="20" y="66" width="560" height="384"/>
+                                <color key="backgroundColor" red="0.36862745098039218" green="0.6588235294117647" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.91764705879999997" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-SemiboldItalic" family="Lato" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.47450980392156861" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rc9-Dh-psF" secondAttribute="bottom" constant="20" id="1GY-R3-qws"/>
+                            <constraint firstAttribute="trailing" secondItem="lfF-az-mx4" secondAttribute="trailing" id="5KB-WP-dDP"/>
+                            <constraint firstItem="zM5-Ii-173" firstAttribute="top" secondItem="wUE-NJ-fQP" secondAttribute="bottom" constant="20" id="5xO-a0-Q4s"/>
+                            <constraint firstItem="wUE-NJ-fQP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5xX-uU-XFm"/>
+                            <constraint firstItem="jMG-8b-TdK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Elm-bo-ebK"/>
+                            <constraint firstAttribute="trailing" secondItem="wUE-NJ-fQP" secondAttribute="trailing" constant="20" id="FK2-fQ-UEh"/>
+                            <constraint firstItem="CBu-uG-tp6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="LHO-Tz-qmo"/>
+                            <constraint firstItem="h89-Nf-OFe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Qkh-lH-yMR"/>
+                            <constraint firstItem="Rc9-Dh-psF" firstAttribute="top" secondItem="h89-Nf-OFe" secondAttribute="bottom" constant="20" id="Sfa-wc-5mg"/>
+                            <constraint firstItem="wUE-NJ-fQP" firstAttribute="top" secondItem="CBu-uG-tp6" secondAttribute="bottom" constant="8" id="adq-4Y-cbl"/>
+                            <constraint firstAttribute="trailing" secondItem="CBu-uG-tp6" secondAttribute="trailing" constant="20" id="eG8-tr-al9"/>
+                            <constraint firstItem="Rc9-Dh-psF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="i04-7c-ae0"/>
+                            <constraint firstItem="h89-Nf-OFe" firstAttribute="top" secondItem="wUE-NJ-fQP" secondAttribute="bottom" constant="20" id="kKJ-E7-Hal"/>
+                            <constraint firstItem="Rc9-Dh-psF" firstAttribute="top" secondItem="h89-Nf-OFe" secondAttribute="bottom" constant="20" id="nFe-72-dbL"/>
+                            <constraint firstAttribute="trailing" secondItem="zM5-Ii-173" secondAttribute="trailing" constant="20" id="qIz-g8-quC"/>
+                            <constraint firstAttribute="trailing" secondItem="Rc9-Dh-psF" secondAttribute="trailing" constant="20" id="sRm-7Q-qa4"/>
+                            <constraint firstItem="Rc9-Dh-psF" firstAttribute="top" secondItem="zM5-Ii-173" secondAttribute="bottom" constant="20" id="udj-ov-2VJ"/>
+                            <constraint firstItem="lfF-az-mx4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vlI-HR-lH3"/>
+                            <constraint firstItem="lfF-az-mx4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vvw-oS-d3P"/>
+                            <constraint firstItem="jMG-8b-TdK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wKz-iT-rhe"/>
+                            <constraint firstItem="CBu-uG-tp6" firstAttribute="leading" secondItem="jMG-8b-TdK" secondAttribute="trailing" constant="10" id="yEH-Jx-T7p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sfa-wc-5mg"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="keywordField" destination="CBu-uG-tp6" id="0fQ-U6-B7d"/>
+                        <outlet property="textField" destination="wUE-NJ-fQP" id="wUb-9N-fPn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="388" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock@1x" width="40" height="50"/>
+        <image name="unlock@1x" width="38" height="51"/>
+    </resources>
 </document>

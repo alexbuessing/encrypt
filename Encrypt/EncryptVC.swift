@@ -33,6 +33,8 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
         
         textField.delegate = self
         keywordField.delegate = self
+        textField.returnKeyType = UIReturnKeyType.Done
+        keywordField.returnKeyType = UIReturnKeyType.Done
         clearAll()
         
     }
@@ -305,6 +307,16 @@ class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate 
         
     }
     
+    @IBAction func infoPressed(sender: AnyObject) {
+        performSegueWithIdentifier("showInfo", sender: nil)
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 
 }
 

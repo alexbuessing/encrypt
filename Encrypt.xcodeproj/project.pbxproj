@@ -27,9 +27,10 @@
 		FA04103E1CD0228C001423A2 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA04102C1CD0228C001423A2 /* Lato-Thin.ttf */; };
 		FA04103F1CD0228C001423A2 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA04102D1CD0228C001423A2 /* Lato-ThinItalic.ttf */; };
 		FA0410411CD02CF5001423A2 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0410401CD02CF5001423A2 /* MaterialView.swift */; };
-		FA0410431CD03BF8001423A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0410421CD03BF8001423A2 /* QuartzCore.framework */; };
+		FA0410451CE4EB2B001423A2 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0410441CE4EB2B001423A2 /* InformationVC.swift */; };
+		FA0410471CE4FDBE001423A2 /* DescripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0410461CE4FDBE001423A2 /* DescripView.swift */; };
 		FA086D731CCD1CC500451386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA086D721CCD1CC500451386 /* AppDelegate.swift */; };
-		FA086D751CCD1CC500451386 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA086D741CCD1CC500451386 /* ViewController.swift */; };
+		FA086D751CCD1CC500451386 /* EncryptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA086D741CCD1CC500451386 /* EncryptVC.swift */; };
 		FA086D781CCD1CC500451386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA086D761CCD1CC500451386 /* Main.storyboard */; };
 		FA086D7A1CCD1CC500451386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA086D791CCD1CC500451386 /* Assets.xcassets */; };
 		FA086D7D1CCD1CC500451386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA086D7B1CCD1CC500451386 /* LaunchScreen.storyboard */; };
@@ -60,10 +61,11 @@
 		FA04102C1CD0228C001423A2 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		FA04102D1CD0228C001423A2 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		FA0410401CD02CF5001423A2 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
-		FA0410421CD03BF8001423A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA0410441CE4EB2B001423A2 /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		FA0410461CE4FDBE001423A2 /* DescripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescripView.swift; sourceTree = "<group>"; };
 		FA086D6F1CCD1CC500451386 /* Encrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA086D721CCD1CC500451386 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA086D741CCD1CC500451386 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA086D741CCD1CC500451386 /* EncryptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptVC.swift; sourceTree = "<group>"; };
 		FA086D771CCD1CC500451386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA086D791CCD1CC500451386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA086D7C1CCD1CC500451386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0410431CD03BF8001423A2 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +115,6 @@
 		FA086D661CCD1CC500451386 = {
 			isa = PBXGroup;
 			children = (
-				FA0410421CD03BF8001423A2 /* QuartzCore.framework */,
 				FA086D711CCD1CC500451386 /* Encrypt */,
 				FA086D701CCD1CC500451386 /* Products */,
 			);
@@ -148,7 +148,8 @@
 		FA086D861CCD1E3200451386 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FA086D741CCD1CC500451386 /* ViewController.swift */,
+				FA086D741CCD1CC500451386 /* EncryptVC.swift */,
+				FA0410441CE4EB2B001423A2 /* InformationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -160,6 +161,7 @@
 				FA086D8C1CCEAF8300451386 /* TextView.swift */,
 				FA0410191CD01EFC001423A2 /* TextFieldView.swift */,
 				FA0410401CD02CF5001423A2 /* MaterialView.swift */,
+				FA0410461CE4FDBE001423A2 /* DescripView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -269,12 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA086D751CCD1CC500451386 /* ViewController.swift in Sources */,
+				FA086D751CCD1CC500451386 /* EncryptVC.swift in Sources */,
 				FA04101A1CD01EFC001423A2 /* TextFieldView.swift in Sources */,
 				FA086D731CCD1CC500451386 /* AppDelegate.swift in Sources */,
 				FA086D8B1CCEAC7C00451386 /* ButtonView.swift in Sources */,
+				FA0410451CE4EB2B001423A2 /* InformationVC.swift in Sources */,
 				FA086D911CCEBDAC00451386 /* MessageComposer.swift in Sources */,
 				FA086D851CCD1D1A00451386 /* Constants.swift in Sources */,
+				FA0410471CE4FDBE001423A2 /* DescripView.swift in Sources */,
 				FA086D8D1CCEAF8300451386 /* TextView.swift in Sources */,
 				FA0410411CD02CF5001423A2 /* MaterialView.swift in Sources */,
 			);
